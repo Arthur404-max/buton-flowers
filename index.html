@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бутон — цветочная мастерская в Москве</title>
+    <meta name="description" content="Свежие авторские букеты с доставкой по Москве за 2 часа. Соберём букет под ваш повод и подарим эмоцию, которую запомнят.">
+    <meta name="theme-color" content="#1e2a23">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:title" content="Бутон — цветочная мастерская в Москве">
+    <meta property="og:description" content="Свежие авторские букеты с доставкой по Москве за 2 часа. Соберём букет под ваш повод.">
+    <meta property="og:image" content="images/hero-bouquet.jpg">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+    <div class="atmosphere" id="atmosphere" aria-hidden="true"></div>
+
+    <div class="announcement">
+        <div class="container announcement-inner">
+            <span class="announcement-item">✿ Свежие цветы каждый день</span>
+            <span class="announcement-item announcement-center">Бесплатная доставка по Москве от 5 000 ₽</span>
+            <a class="announcement-item announcement-link" href="tel:+79991234567">+7 (999) 123-45-67</a>
+        </div>
+    </div>
+
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#hero" class="logo" aria-label="Бутон — на главную">Бутон<span>.</span></a>
+
+            <nav class="nav" id="nav" aria-label="Основная навигация">
+                <a href="#catalog" class="nav-link">Каталог</a>
+                <a href="#about" class="nav-link">О нас</a>
+                <a href="#gallery" class="nav-link">Галерея</a>
+                <a href="#delivery" class="nav-link">Доставка</a>
+                <a href="#reviews" class="nav-link">Отзывы</a>
+                <a href="#contact" class="nav-link">Контакты</a>
+                <div class="nav-extra">
+                    <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                    <span>Ежедневно, 9:00 — 21:00</span>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+79991234567" class="header-phone">+7 (999) 123-45-67</a>
+                <a href="#catalog" class="btn btn-dark btn-sm">Выбрать букет</a>
+                <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main">
+        <!-- ================= ГЕРОЙ ================= -->
+        <section class="hero" id="hero">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <span class="eyebrow"><span class="eyebrow-dot"></span>Цветочная мастерская · Москва</span>
+                    <h1 class="hero-title">Цветы, которые <em>говорят</em> за тебя</h1>
+                    <p class="hero-lead">Свежие авторские букеты, собранные вручную в день заказа. Привезём точно во время и подарим эмоцию, которую запомнят.</p>
+                    <div class="hero-actions">
+                        <a href="#catalog" class="btn btn-primary">Выбрать букет <span class="btn-arrow">→</span></a>
+                        <a href="#gallery" class="btn btn-ghost">Смотреть работы</a>
+                    </div>
+                    <div class="hero-proof">
+                        <div class="proof-avatars">
+                            <img src="images/avatar-1.jpg" alt="Клиент" width="48" height="48">
+                            <img src="images/avatar-2.jpg" alt="Клиент" width="48" height="48">
+                            <img src="images/avatar-3.jpg" alt="Клиент" width="48" height="48">
+                        </div>
+                        <div class="proof-text">
+                            <span class="proof-stars">★★★★★</span>
+                            <span><b>5 000+</b> счастливых клиентов</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual" id="heroVisual">
+                    <div class="hero-glow" aria-hidden="true"></div>
+                    <div class="hero-orbit" aria-hidden="true"></div>
+
+                    <figure class="hero-arch" data-parallax="1">
+                        <img src="images/hero-bouquet.jpg" alt="Пышный букет розовых пионов и роз" width="1000" height="1250" fetchpriority="high">
+                    </figure>
+
+                    <figure class="hero-small" data-parallax="2">
+                        <img src="images/hero-closeup.jpg" alt="Крупный план нежных розовых лепестков" width="600" height="750" loading="lazy">
+                    </figure>
+
+                    <div class="hero-card hero-rating" data-parallax="3">
+                        <span class="stars">★★★★★</span>
+                        <div><b>4.9</b><span>1 240 отзывов</span></div>
+                    </div>
+
+                    <div class="hero-card hero-delivery" data-parallax="3">
+                        <span class="hero-delivery-icon">✿</span>
+                        <div><b>Доставим за 2 часа</b><span>бережно и вовремя</span></div>
+                    </div>
+
+                    <div class="hero-tag" data-parallax="2">
+                        <span>Букет «Розовый сад»</span>
+                        <b>3 900 ₽</b>
+                    </div>
+
+                    <div class="hero-flowers" id="heroFlowers" aria-hidden="true"></div>
+                </div>
+            </div>
+
+            <a href="#catalog" class="hero-scroll" aria-label="Листать вниз">
+                <span class="hero-scroll-line"></span>Листайте вниз
+            </a>
+        </section>
+
+        <!-- ================= БЕГУЩАЯ СТРОКА ================= -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track" id="marqueeTrack">
+                <span>Пионы</span><i>✿</i>
+                <span>Розы</span><i>✿</i>
+                <span>Тюльпаны</span><i>✿</i>
+                <span>Гортензии</span><i>✿</i>
+                <span>Эустомы</span><i>✿</i>
+                <span>Орхидеи</span><i>✿</i>
+                <span>Лизиантусы</span><i>✿</i>
+                <span>Герберы</span><i>✿</i>
+            </div>
+        </div>
+
+        <!-- ================= КАТАЛОГ ================= -->
+        <section class="section catalog" id="catalog">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow center">Наши букеты</span>
+                    <h2 class="section-title">Найдите свой <em>букет</em></h2>
+                    <p class="section-sub">Каждый — с историей и характером. Выберите готовый или соберите свой.</p>
+                </div>
+
+                <div class="filters" role="group" aria-label="Фильтр букетов">
+                    <button class="filter is-active" data-filter="all" aria-pressed="true">Все</button>
+                    <button class="filter" data-filter="delicate" aria-pressed="false">Нежные</button>
+                    <button class="filter" data-filter="bright" aria-pressed="false">Яркие</button>
+                    <button class="filter" data-filter="author" aria-pressed="false">Авторские</button>
+                </div>
+
+                <div class="cards-grid" id="cardsGrid"></div>
+
+                <div class="catalog-note reveal">
+                    <span>Не нашли идеальный букет?</span>
+                    <a href="#contact" class="link-arrow">Соберём индивидуально <span>→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= О НАС ================= -->
+        <section class="section about" id="about">
+            <div class="container about-grid">
+                <div class="about-visual">
+                    <div class="about-main">
+                        <img src="images/about-main.jpg" alt="Флорист собирает букет из свежих цветов" width="900" height="1100" loading="lazy">
+                    </div>
+                    <div class="about-small">
+                        <img src="images/about-small.jpg" alt="Цветы в мастерской Бутон" width="500" height="620" loading="lazy">
+                    </div>
+                    <div class="about-badge">
+                        <b>8 лет</b>
+                        <span>создаём букеты<br>с любовью</span>
+                    </div>
+                    <div class="about-flower" id="aboutFlower" aria-hidden="true"></div>
+                </div>
+
+                <div class="about-content">
+                    <span class="eyebrow">Почему выбирают нас</span>
+                    <h2 class="section-title">С любовью к <em>каждому</em> цветку</h2>
+                    <p class="about-lead">Мы не просто продаём цветы — мы создаём моменты, которые потом вспоминают с улыбкой. За каждым букетом стоит ручная работа и внимание к деталям.</p>
+
+                    <ul class="features">
+                        <li>
+                            <span class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2c2.2 2.6 2.2 5.4 0 7-2.2-1.6-2.2-4.4 0-7ZM12 22c-2.2-2.6-2.2-5.4 0-7 2.2 1.6 2.2 4.4 0 7ZM2 12c2.6-2.2 5.4-2.2 7 0-1.6 2.2-4.4 2.2-7 0ZM22 12c-2.6 2.2-5.4 2.2-7 0 1.6-2.2 4.4-2.2 7 0Z"/></svg>
+                            </span>
+                            <div><b>Только свежие цветы</b><span>Поставки каждый день от проверенных плантаций</span></div>
+                        </li>
+                        <li>
+                            <span class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10Z"/></svg>
+                            </span>
+                            <div><b>Ручная работа</b><span>Каждый букет собирает флорист с душой</span></div>
+                        </li>
+                        <li>
+                            <span class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 7h10v9H3zM13 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="2"/><circle cx="17" cy="18" r="2"/></svg>
+                            </span>
+                            <div><b>Точная доставка</b><span>Привезём в удобный час в любой район города</span></div>
+                        </li>
+                        <li>
+                            <span class="feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="2"/><path d="M3 12h18M12 8v13M12 8C10 8 8 7 8 5.5S9 3 10.5 3C12 3 12 5 12 8Zm0 0c2 0 4-1 4-2.5S15 3 13.5 3C12 3 12 5 12 8Z"/></svg>
+                            </span>
+                            <div><b>Красивая упаковка</b><span>Дизайнерская бумага, ленты и открытка в подарок</span></div>
+                        </li>
+                    </ul>
+
+                    <div class="about-signature">
+                        <span class="signature-name">Анна Ветрова</span>
+                        <span class="signature-role">основатель Бутона</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ГАЛЕРЕЯ ================= -->
+        <section class="section gallery" id="gallery">
+            <div class="container">
+                <div class="section-head">
+                    <span class="eyebrow center">Наши работы</span>
+                    <h2 class="section-title">Букеты, которые <em>мы создали</em></h2>
+                    <p class="section-sub">Каждый — уникальный. Вдохновляйтесь и выбирайте свой.</p>
+                </div>
+                <div class="gallery-grid" id="galleryGrid"></div>
+            </div>
+        </section>
+
+        <!-- ================= ДОСТАВКА ================= -->
+        <section class="section delivery" id="delivery">
+            <span class="delivery-decor" aria-hidden="true">✿</span>
+            <div class="container">
+                <div class="section-head section-head-light">
+                    <span class="eyebrow center eyebrow-light">Просто и быстро</span>
+                    <h2 class="section-title">Как заказать <em>букет</em></h2>
+                    <p class="section-sub">Три шага — и цветы уже в пути</p>
+                </div>
+
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-num">01</span>
+                        <h3>Выберите букет</h3>
+                        <p>В каталоге или расскажите идею — флорист соберёт индивидуально под ваш повод.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">02</span>
+                        <h3>Оформите заказ</h3>
+                        <p>Онлайн, по телефону или в мессенджере — так, как вам удобнее.</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-num">03</span>
+                        <h3>Получите эмоцию</h3>
+                        <p>Курьер привезёт свежие цветы точно во время. Фото букета отправим заранее.</p>
+                    </div>
+                </div>
+
+                <div class="delivery-perks">
+                    <span>✿ Доставка за 2 часа</span>
+                    <span>✿ Бесплатно от 5 000 ₽</span>
+                    <span>✿ Фото перед отправкой</span>
+                    <span>✿ Оплата при получении</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ОТЗЫВЫ ================= -->
+        <section class="section reviews" id="reviews">
+            <div class="container">
+                <div class="reviews-head">
+                    <div class="section-head section-head-left">
+                        <span class="eyebrow">Отзывы</span>
+                        <h2 class="section-title">Нам <em>доверяют</em></h2>
+                        <p class="section-sub">Живые истории наших клиентов</p>
+                    </div>
+                    <div class="reviews-score">
+                        <b>4.9</b>
+                        <div>
+                            <span class="stars">★★★★★</span>
+                            <span>1 240 отзывов</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reviews-grid">
+                    <article class="review reveal">
+                        <span class="review-quote" aria-hidden="true">“</span>
+                        <span class="stars">★★★★★</span>
+                        <p>Заказывала букет на день рождения мамы — привезли вовремя, цветы просто невероятные. Отдельное спасибо за открытку, мама растрогалась до слёз.</p>
+                        <div class="review-author">
+                            <img src="images/avatar-1.jpg" alt="" width="46" height="46" loading="lazy">
+                            <div><b>Анна Ковалёва</b><span>Москва</span></div>
+                        </div>
+                    </article>
+
+                    <article class="review reveal">
+                        <span class="review-quote" aria-hidden="true">“</span>
+                        <span class="stars">★★★★★</span>
+                        <p>Помогли собрать букет для предложения руки и сердца. Учли каждую деталь, всё было идеально. Девушка в восторге, и я тоже. Рекомендую от души.</p>
+                        <div class="review-author">
+                            <img src="images/avatar-2.jpg" alt="" width="46" height="46" loading="lazy">
+                            <div><b>Дмитрий Петров</b><span>Санкт-Петербург</span></div>
+                        </div>
+                    </article>
+
+                    <article class="review reveal">
+                        <span class="review-quote" aria-hidden="true">“</span>
+                        <span class="stars">★★★★★</span>
+                        <p>Прекрасная упаковка и очень свежие цветы. Заказывала в дождь, переживала за доставку — курьер всё сохранил идеально. Теперь только сюда.</p>
+                        <div class="review-author">
+                            <img src="images/avatar-3.jpg" alt="" width="46" height="46" loading="lazy">
+                            <div><b>Мария Лебедева</b><span>Казань</span></div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= FAQ ================= -->
+        <section class="section faq" id="faq">
+            <div class="container faq-grid">
+                <div class="faq-intro">
+                    <span class="eyebrow">Вопросы</span>
+                    <h2 class="section-title">Частые <em>вопросы</em></h2>
+                    <p class="section-sub">Не нашли ответ? Напишите нам — обязательно поможем и подскажем.</p>
+                    <a href="#contact" class="link-arrow">Задать вопрос <span>→</span></a>
+                </div>
+
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary>Как быстро вы доставляете цветы?<span class="faq-icon" aria-hidden="true">+</span></summary>
+                        <div class="faq-body"><p>По Москве — в течение 2 часов после подтверждения заказа. Также можем привезти к точному времени: просто укажите дату и час при оформлении.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Можно ли заказать индивидуальный букет?<span class="faq-icon" aria-hidden="true">+</span></summary>
+                        <div class="faq-body"><p>Конечно. Расскажите повод, любимые цвета и бюджет — флорист предложит состав и пришлёт эскиз. Индивидуальная сборка занимает от 1 часа.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Что делать, если цветы не понравились?<span class="faq-icon" aria-hidden="true">+</span></summary>
+                        <div class="faq-body"><p>Мы гарантируем свежесть 7 дней. Если что-то пошло не так — заменим букет или вернём деньги. Для нас важно, чтобы вы остались довольны.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Есть ли открытка к букету?<span class="faq-icon" aria-hidden="true">+</span></summary>
+                        <div class="faq-body"><p>Да, открытка с вашим текстом — бесплатно. Напишите пожелание в комментарии к заказу, и мы оформим её каллиграфическим почерком.</p></div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Можно оплатить при получении?<span class="faq-icon" aria-hidden="true">+</span></summary>
+                        <div class="faq-body"><p>Да, курьер принимает карту и наличные. Также доступна онлайн-оплата на сайте — как вам удобнее.</p></div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CTA ================= -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta">
+                    <div class="cta-content">
+                        <span class="eyebrow eyebrow-light">Цветы говорят громче слов</span>
+                        <h2>Подарите цветы <em>сегодня</em></h2>
+                        <p>Выберите букет — мы соберём его из свежих цветов и доставим с заботой.</p>
+                        <a href="#catalog" class="btn btn-light">Выбрать букет <span class="btn-arrow">→</span></a>
+                    </div>
+                    <span class="cta-flower" aria-hidden="true">✿</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= КОНТАКТЫ ================= -->
+        <section class="section contact" id="contact">
+            <div class="container contact-grid">
+                <div class="contact-info">
+                    <span class="eyebrow">Есть вопрос?</span>
+                    <h2 class="section-title">Давайте <em>поговорим</em></h2>
+                    <p class="section-sub">Поможем подобрать букет под любой повод и бюджет. Отвечаем в течение 15 минут.</p>
+
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <span class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg>
+                            </span>
+                            <div><small>Телефон</small><a href="tel:+79991234567">+7 (999) 123-45-67</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 5h16v14H4z"/><path d="m4 7 8 6 8-6"/></svg>
+                            </span>
+                            <div><small>Почта</small><a href="mailto:hello@buton.ru">hello@buton.ru</a></div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                            </span>
+                            <div><small>Мастерская</small><span>Москва, ул. Цветочная, 12</span></div>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                            </span>
+                            <div><small>Режим работы</small><span>Ежедневно, 9:00 — 21:00</span></div>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <span>Мы в мессенджерах:</span>
+                        <a href="https://wa.me/79991234567">WhatsApp</a>
+                        <a href="https://t.me/butonflowers">Telegram</a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrap">
+                    <form id="orderForm" class="contact-form" novalidate>
+                        <h3>Оставить заявку</h3>
+                        <p class="form-sub">Перезвоним в течение 15 минут</p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Имя</label>
+                                <input id="name" type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон</label>
+                                <input id="phone" type="tel" name="phone" placeholder="+7 (999) 000-00-00" autocomplete="tel" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="occasion">Повод</label>
+                            <select id="occasion" name="occasion">
+                                <option value="">Выберите повод</option>
+                                <option>День рождения</option>
+                                <option>Свидание</option>
+                                <option>Свадьба</option>
+                                <option>Благодарность</option>
+                                <option>Просто так</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Пожелания к букету</label>
+                            <textarea id="message" name="message" rows="3" placeholder="Например: люблю пионы и пастельные оттенки"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Отправить заявку <span class="btn-arrow">→</span></button>
+                        <small class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</small>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= ФУТЕР ================= -->
+    <footer class="footer">
+        <span class="footer-decor" aria-hidden="true">✿</span>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="logo logo-light">Бутон<span>.</span></a>
+                    <p>Цветочная мастерская в Москве. Создаём букеты, которые говорят за вас, и доставляем их с заботой.</p>
+                    <div class="socials">
+                        <a href="https://instagram.com" aria-label="Instagram">Instagram</a>
+                        <a href="https://t.me/butonflowers" aria-label="Telegram">Telegram</a>
+                        <a href="https://vk.com" aria-label="VK">VK</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Навигация</h4>
+                    <a href="#catalog">Каталог</a>
+                    <a href="#about">О нас</a>
+                    <a href="#gallery">Галерея</a>
+                    <a href="#delivery">Доставка</a>
+                    <a href="#reviews">Отзывы</a>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Контакты</h4>
+                    <a href="tel:+79991234567">+7 (999) 123-45-67</a>
+                    <a href="mailto:hello@buton.ru">hello@buton.ru</a>
+                    <span>Москва, ул. Цветочная, 12</span>
+                    <span>Ежедневно, 9:00 — 21:00</span>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <span>© 2026 Бутон. Все права защищены.</span>
+                <a href="#">Политика конфиденциальности</a>
+                <span>Сделано с любовью к цветам ✿</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Лайтбокс галереи -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" hidden>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Закрыть">×</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Предыдущее фото">←</button>
+        <figure class="lightbox-figure">
+            <img id="lightboxImage" src="" alt="">
+            <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Следующее фото">→</button>
+        <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
+
+    <!-- Уведомление -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <span class="toast-icon">✓</span><span id="toastText"></span>
+    </div>
+
+    <button class="to-top" id="toTop" aria-label="Вернуться наверх">↑</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
